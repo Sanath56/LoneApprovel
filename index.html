@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Loan Risk Assessment System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>🏦 Smart Loan Risk Assessment System</h1>
+<p>Professional Loan Eligibility & Risk Analysis</p>
+</div>
+
+<div class="card">
+
+<h2>Applicant Information</h2>
+
+<div class="grid">
+
+<div>
+<label>Full Name</label>
+<input type="text" id="name">
+</div>
+
+<div>
+<label>Age</label>
+<input type="number" id="age">
+</div>
+
+<div>
+<label>Gender</label>
+<select id="gender">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+
+<div>
+<label>Marital Status</label>
+<select id="marital">
+<option>Single</option>
+<option>Married</option>
+</select>
+</div>
+
+</div>
+
+<h2>Employment Details</h2>
+
+<div class="grid">
+
+<div>
+<label>Employment Type</label>
+<select id="employment">
+<option value="1">Government</option>
+<option value="2">Private</option>
+<option value="3">Self Employed</option>
+<option value="0">Unemployed</option>
+</select>
+</div>
+
+<div>
+<label>Work Experience (Years)</label>
+<input type="number" id="experience">
+</div>
+
+</div>
+
+<h2>Financial Information</h2>
+
+<div class="grid">
+
+<div>
+<label>Monthly Income (₹)</label>
+<input type="number" id="income">
+</div>
+
+<div>
+<label>Monthly Expenses (₹)</label>
+<input type="number" id="expenses">
+</div>
+
+<div>
+<label>Existing Debt (₹)</label>
+<input type="number" id="debt">
+</div>
+
+<div>
+<label>Credit Score</label>
+<input type="number" id="credit">
+</div>
+
+<div>
+<label>Loan Amount Requested (₹)</label>
+<input type="number" id="loan">
+</div>
+
+<div>
+<label>Loan Term (Years)</label>
+<input type="number" id="term">
+</div>
+
+</div>
+
+<button onclick="analyzeLoan()">
+Generate Assessment Report
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

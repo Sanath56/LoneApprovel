@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Assessment Report</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>Loan Assessment Report</h1>
+<p id="reportDate"></p>
+</div>
+
+<div class="report-card">
+
+<div class="score-box">
+
+<div class="score" id="score">
+0
+</div>
+
+<h3>Eligibility Score</h3>
+
+<div class="progress">
+<div class="progress-bar" id="bar"></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="report-card">
+
+<h2>Decision Summary</h2>
+
+<table class="table">
+
+<tr>
+<td><b>Applicant Name</b></td>
+<td id="name"></td>
+</tr>
+
+<tr>
+<td><b>Approval Status</b></td>
+<td id="status"></td>
+</tr>
+
+<tr>
+<td><b>Risk Level</b></td>
+<td id="risk"></td>
+</tr>
+
+<tr>
+<td><b>Approval Probability</b></td>
+<td id="probability"></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="report-card">
+
+<h2>Financial Details</h2>
+
+<table class="table">
+
+<tr>
+<td>Monthly Income</td>
+<td id="income"></td>
+</tr>
+
+<tr>
+<td>Monthly Expenses</td>
+<td id="expenses"></td>
+</tr>
+
+<tr>
+<td>Existing Debt</td>
+<td id="debt"></td>
+</tr>
+
+<tr>
+<td>Credit Score</td>
+<td id="credit"></td>
+</tr>
+
+<tr>
+<td>Loan Amount</td>
+<td id="loan"></td>
+</tr>
+
+<tr>
+<td>Loan Term</td>
+<td id="term"></td>
+</tr>
+
+<tr>
+<td>Debt To Income Ratio</td>
+<td id="dti"></td>
+</tr>
+
+<tr>
+<td>Estimated EMI</td>
+<td id="emi"></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="report-card">
+
+<h2>Financial Analysis</h2>
+
+<p id="analysis"></p>
+
+</div>
+
+<div class="report-card">
+
+<h2>Recommendations</h2>
+
+<p id="recommendation"></p>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">
+🖨 Print Report
+</button>
+
+</div>
+
+<script>
+
+let score =
+localStorage.getItem("score");
+
+document.getElementById("score").innerHTML =
+score;
+
+document.getElementById("bar").style.width =
+score + "%";
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("name");
+
+document.getElementById("status").innerHTML =
+localStorage.getItem("status");
+
+document.getElementById("risk").innerHTML =
+localStorage.getItem("risk");
+
+document.getElementById("probability").innerHTML =
+localStorage.getItem("probability") + "%";
+
+document.getElementById("income").innerHTML =
+"₹ " + localStorage.getItem("income");
+
+document.getElementById("expenses").innerHTML =
+"₹ " + localStorage.getItem("expenses");
+
+document.getElementById("debt").innerHTML =
+"₹ " + localStorage.getItem("debt");
+
+document.getElementById("credit").innerHTML =
+localStorage.getItem("credit");
+
+document.getElementById("loan").innerHTML =
+"₹ " + localStorage.getItem("loan");
+
+document.getElementById("term").innerHTML =
+localStorage.getItem("term") + " Years";
+
+document.getElementById("dti").innerHTML =
+localStorage.getItem("dti") + "%";
+
+document.getElementById("emi").innerHTML =
+"₹ " + localStorage.getItem("emi");
+
+document.getElementById("analysis").innerHTML =
+localStorage.getItem("analysis");
+
+document.getElementById("recommendation").innerHTML =
+localStorage.getItem("recommendation");
+
+let today = new Date();
+
+document.getElementById("reportDate").innerHTML =
+"Generated on: " +
+today.toLocaleDateString();
+
+</script>
+
+</body>
+</html>
